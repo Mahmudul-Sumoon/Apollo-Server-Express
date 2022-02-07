@@ -17,7 +17,11 @@ const apolloServer = new ApolloServer({
     Query,          //Queries
     Book,           //table1
     Author,         //table2
-  },  
+  },
+  debug: true,
+  tracing: true,
+  introspection: true,
+  playground: true
 });
 await apolloServer.start();
 apolloServer.applyMiddleware({app});
