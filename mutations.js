@@ -80,7 +80,7 @@ exports.Mutation = {
         data: { name: name ,age:age},
       });
       if (author) {
-        return{status:200,message:`${name}Updated Successfully`,error:""};
+        return{status:200,message:`${name} Updated Successfully`,error:""};
         
       } else {
         return{status:404,message:"",error:`${name} Can't Be Updated`};
@@ -98,7 +98,7 @@ exports.Mutation = {
         data: { name: name , genre:genre, authorId:authorId},
       });
       if (book) {
-        return{status:200,message:`${name}Updated Successfully`,error:""};
+        return{status:200,message:`${name} Updated Successfully`,error:""};
         
       } else {
         return{status:404,message:"",error:`${name} Can't Be Updated`};
