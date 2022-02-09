@@ -11,7 +11,7 @@ const resolvers = {
     book: async (parent, args, context) => {
       try {
         const book = await prisma.book.findUnique({ where: { id: args.id } });
-        return book;
+                return book;
       } catch (error) {
         return error;
       }
@@ -20,6 +20,9 @@ const resolvers = {
     books: async (parent, args, contex) => {
       try {
         const books = await prisma.book.findMany({});
+        books.map((i)=>
+        delete i.__typename,
+        )
 
         return books;
       } catch (error) {
