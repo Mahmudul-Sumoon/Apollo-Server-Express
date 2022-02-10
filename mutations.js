@@ -12,7 +12,7 @@ exports.Mutation = {
       await prisma.author.create({
         data: { name: name, age: age },
       });
-      return `${name} Created Succesfully`;
+      return "Created Succesfully";
     } catch (error) {
       return "Can't Create Author";
     }
@@ -27,7 +27,7 @@ exports.Mutation = {
           authorId: authorId,
         },
       });
-      return `${name} Created Succesfully`;
+      return "Created Succesfully";
     } catch (error) {
       return "Can't Create Book";
     }
